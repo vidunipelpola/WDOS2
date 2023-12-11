@@ -52,47 +52,47 @@
                                     <legend>
                                         <h2>Book your stay</h2>
                                     </legend>
-                                    <label>Full Name:</label>
+                                    <label for="fullNameInput">Full Name:</label>
                                         <input type="text" id="fullNameInput" name="fullName" >&nbsp;&nbsp;&nbsp;                                                                               
-                                    <label>Contact No.:</label>
+                                    <label for="phoneNum2Input">Contact No.:</label>
                                         <input type="tel" name="phoneNum" maxlength="10" id="phoneNumInput">&nbsp;&nbsp;&nbsp;
-                                    <label>Email Address:</label>
+                                    <label for="emailInput">Email Address:</label>
                                         <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" >&nbsp;&nbsp;&nbsp;         
                                     <br> 
-                                    <label>Adults:</label>
+                                    <label for="numOfAdults">Adults:</label>
                                         <input type="number" name="numOfAdults" id="adultsInput" min="1" max="100" >&nbsp;&nbsp;&nbsp; 
-                                    <label>Children (5-12):</label>
+                                    <label for="KidsInput">Children (5-12):</label>
                                         <input type="number" name="numOfKids" id="kidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
-                                    <label>Children (0-5):</label>
+                                    <label for="smallKidsInput">Children (0-5):</label>
                                         <input type="number" name="numOfSmallKids" id="smallKidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
-                                    <label>Single Rooms:</label>
+                                    <label for="singleInput">Single Rooms:</label>
                                         <input type="number" name="numOfSingle" id="singleInput" min="0" max="20">&nbsp;&nbsp;&nbsp; 
-                                    <label>Double Rooms:</label>
+                                    <label for="doubleInput">Double Rooms:</label>
                                         <input type="number" name="numOfDouble" id="doubleInput" min="0" max="20">&nbsp;&nbsp;&nbsp;
-                                    <label>Triple Rooms:</label>
+                                    <label for="tripleInput">Triple Rooms:</label>
                                         <input type="number" name="numOfTriple" id="tripleInput" min="0" max="20"><br><br>
-                                    <label>Check-in:</label>
+                                    <label for="checkInInput">Check-in:</label>
                                         <input type="date" name="checkInDate" id="checkInInput" >&nbsp;&nbsp;&nbsp;
-                                    <label>Days:</label>
+                                    <label for="daysInput">Days:</label>
                                         <input type="number" name="numOfDays" id="daysInput" min="1" value="1" >&nbsp;&nbsp;&nbsp;
                                     <h3>Extras:</h3>
                                     <input type="checkbox" id="wifi" value="wifi" name="extras">
-                                        <label>Wifi</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="wifi">Wifi</label>&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" id="poolView" value="poolView" name="extras">
-                                        <label>Pool View</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="poolView">Pool View</label>&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" id="gardenView" value="gardenView" name="extras">
-                                        <label>Garden View</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="gardenView">Garden View</label>&nbsp;&nbsp;&nbsp;
                                     <input type="checkbox" id="extraBed" value="extraBed" name="extras">
-                                        <label>Extra Bed</label>&nbsp;&nbsp;&nbsp;
-                                    <label>Promo Code:</label>
+                                        <label for="extraBed">Extra Bed</label>&nbsp;&nbsp;&nbsp;
+                                    <label for="promoCodeInput">Promo Code:</label>
                                         <input type="text" name="promoCode" maxlength="100" id="promoCodeInput">&nbsp;&nbsp;&nbsp;<br><br>
                                     <h3>
                                         Payment Details:
                                     </h3>
                                     <input type="radio" id="cash" value="Cash" name="payment">
-                                        <label>Cash</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="cash">Cash</label>&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="card" value="Card" name="payment">
-                                        <label>Card&nbsp;&nbsp;&nbsp;</label>
+                                        <label for="card">Card&nbsp;&nbsp;&nbsp;</label>
                                     <span>
                                      Current Cost:&nbsp;<span id="currentCost">LKR 0.00</span>  
                                     </span>&nbsp;&nbsp;&nbsp;
@@ -121,42 +121,42 @@
                                     <legend>
                                         <h2>Book adventures</h2>
                                     </legend>
-                                    <label>Full Name:</label>
+                                    <label for="fullName2Input">Full Name:</label>
                                         <input type="text" name="fullName2" maxlength="100" id="fullName2Input" >&nbsp;&nbsp;&nbsp;                                                                               
-                                    <label>Contact No.:</label>
+                                    <label for="phoneNum2Input">Contact No.:</label>
                                         <input type="tel" name="phoneNum2" maxlength="10" id="phoneNum2Input" >&nbsp;&nbsp;&nbsp;
-                                    <label>Email Address:</label>
+                                    <label for="email2Input">Email Address:</label>
                                         <input type="email" name="email2" id="email2Input" placeholder="example@gmail.com" >&nbsp;&nbsp;&nbsp;         
                                     <br> 
-                                    <label>Local Adults:</label>
+                                    <label for="localAdultsInput">Local Adults:</label>
                                         <input type="number" name="numOfLocalAdults" id="localAdultsInput" min="1" max="100">&nbsp;&nbsp;&nbsp; 
-                                    <label>Local Kids (above 5 years):</label>
+                                    <label for="localKidsInput">Local Kids (above 5 years):</label>
                                         <input type="number" name="numOfLocalKids" id="localKidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
-                                    <label>Foreign Adults:</label>
+                                    <label for="foreignAdultsInput">Foreign Adults:</label>
                                         <input type="number" name="numOfForeignAdults" id="foreignAdultsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
-                                    <label>Foreign Kids:</label>
+                                    <label for="foreignKidsInput">Foreign Kids:</label>
                                         <input type="number" name="numOfForeignKids" id="foreignKidsInput" min="0" max="100"><br><br>
-                                    <label>Date:</label>
+                                    <label for="dayInput">Date:</label>
                                         <input type="date" name="day" id="dayInput" >&nbsp;&nbsp;&nbsp;
-                                    <label>Hours:</label>
+                                    <label for="hoursInput">Hours:</label>
                                         <input type="number" name="numOfHours" id="hoursInput" min="1" value="1" >&nbsp;&nbsp;&nbsp;
                                     <h3>Adventure:</h3>
                                     <input type="radio" id="surfing" value="Surfing" name="adventures">
-                                        <label>Surfing</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="surfing">Surfing</label>&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="whaleWatching" value="Whale Watching" name="adventures">
-                                        <label>Whale Watching</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="whaleWatching">Whale Watching</label>&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="diving" value="Diving" name="adventures">
-                                        <label>Diving</label>
+                                        <label for="diving">Diving</label>
                                     <h3>Extra:</h3>
                                     <input type="checkbox" id="guide" value="guide" name="guide">
-                                        <label>Include a Guide</label><br><br>
+                                        <label for="guide">Include a Guide</label><br><br>
                                     <h3>
                                         Payment Details:
                                     </h3>
                                     <input type="radio" id="adventureCash" value="Cash" name="adventurePayment">
-                                        <label>Cash</label>&nbsp;&nbsp;&nbsp;
+                                        <label for="adventureCash">Cash</label>&nbsp;&nbsp;&nbsp;
                                     <input type="radio" id="adventureCard" value="Card" name="adventurePayment">
-                                        <label>Card&nbsp;&nbsp;&nbsp;</label>
+                                        <label for="adventureCard">Card&nbsp;&nbsp;&nbsp;</label>
                                     <span>
                                         Current Cost:&nbsp;<span id="currentAdventureCost">LKR 0.00</span>  
                                     </span>&nbsp;&nbsp;&nbsp;
