@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Book - Hotel Jewel
+        </title>
+        <link rel="stylesheet" href="CSS/Main.css">
+        <script src="Scripts/script.js" defer></script>
+        <!--For the favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="./Images/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./Images/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./Images/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <link rel="mask-icon" href="./Images/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./Images/Favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="./Images/Favicon/browserconfig.xml">
+        <meta name="theme-color" content="#5e2b17">
+    </head>
+    <body>
+        <header><!--A transluscent banner, with the name of the hotel, and the navigation menu-->
+            <div class="banner"><!--A translucent banner at the top of the page that will include the logo, hotel name and navigation bar-->
+                <img class="logo" src="Images/logo.png" alt='logo'>
+                <span class="hotelname">
+                    Hotel Jewel
+                </span><br>  
+                <nav><!--This will include links to all the other pages-->
+                        <a href="index.html">Home</a> <span class="line">|</span><span class="newline"><br></span> 
+                        <a href="Branches.html">Branches</a><span class="line"> |</span><span class="newline"><br></span>  
+                        <a href="Adventures.html">Adventures</a> <span class="line">|</span><span class="newline"><br></span> 
+                        <span class="dropdown"> 
+                            <a href="Restaurants.html">Restaurants<span class="triangle">&#9662;</span></a><span class="newline"><br></span> 
+                            <div class="dropdowncontent">
+                                <a href="Weddings.html">Weddings</a><br>
+                                <a href="Parties.html">Parties</a>
+                            </div> <span class="line">|</span>
+                        </span> 
+                        <a href="Book.html"><i>Book</i></a><br>&nbsp;
+                    </nav>
+            </div>      
+        </header>
+        <main><!--Everything apart from the head, header and footer-->
+            <div class="container"><!--Will hold text and images together, horizontally-->
+                <div class="coverimg"><!--The cover image of the home page-->
+                    <img src="Images/Homepage/coverimage.jpeg" alt='coverimage'>
+                    <div class="textoverimg">
+                        <section><!--This will include the booking form for the hotel-->
+                            <form id="hotelForm" ><!--The form to book a stay at the hotel-->
+                                <fieldset>
+                                    <legend>
+                                        <h2>Book your stay</h2>
+                                    </legend>
+                                    <label>Full Name:</label>
+                                        <input type="text" id="fullNameInput" name="fullName" >&nbsp;&nbsp;&nbsp;                                                                               
+                                    <label>Contact No.:</label>
+                                        <input type="tel" name="phoneNum" maxlength="10" id="phoneNumInput">&nbsp;&nbsp;&nbsp;
+                                    <label>Email Address:</label>
+                                        <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" >&nbsp;&nbsp;&nbsp;         
+                                    <br> 
+                                    <label>Adults:</label>
+                                        <input type="number" name="numOfAdults" id="adultsInput" min="1" max="100" >&nbsp;&nbsp;&nbsp; 
+                                    <label>Children (5-12):</label>
+                                        <input type="number" name="numOfKids" id="kidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
+                                    <label>Children (0-5):</label>
+                                        <input type="number" name="numOfSmallKids" id="smallKidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
+                                    <label>Single Rooms:</label>
+                                        <input type="number" name="numOfSingle" id="singleInput" min="0" max="20">&nbsp;&nbsp;&nbsp; 
+                                    <label>Double Rooms:</label>
+                                        <input type="number" name="numOfDouble" id="doubleInput" min="0" max="20">&nbsp;&nbsp;&nbsp;
+                                    <label>Triple Rooms:</label>
+                                        <input type="number" name="numOfTriple" id="tripleInput" min="0" max="20"><br><br>
+                                    <label>Check-in:</label>
+                                        <input type="date" name="checkInDate" id="checkInInput" >&nbsp;&nbsp;&nbsp;
+                                    <label>Days:</label>
+                                        <input type="number" name="numOfDays" id="daysInput" min="1" value="1" >&nbsp;&nbsp;&nbsp;
+                                    <h3>Extras:</h3>
+                                    <input type="checkbox" id="wifi" value="wifi" name="extras">
+                                        <label>Wifi</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="poolView" value="poolView" name="extras">
+                                        <label>Pool View</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="gardenView" value="gardenView" name="extras">
+                                        <label>Garden View</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="checkbox" id="extraBed" value="extraBed" name="extras">
+                                        <label>Extra Bed</label>&nbsp;&nbsp;&nbsp;
+                                    <label>Promo Code:</label>
+                                        <input type="text" name="promoCode" maxlength="100" id="promoCodeInput">&nbsp;&nbsp;&nbsp;<br><br>
+                                    <h3>
+                                        Payment Details:
+                                    </h3>
+                                    <input type="radio" id="cash" value="Cash" name="payment">
+                                        <label>Cash</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="card" value="Card" name="payment">
+                                        <label>Card&nbsp;&nbsp;&nbsp;</label>
+                                    <span>
+                                     Current Cost:&nbsp;<span id="currentCost">LKR 0.00</span>  
+                                    </span>&nbsp;&nbsp;&nbsp;
+                                    <span>
+                                     Overall Cost:&nbsp;<span id="overallCost">LKR 0.00</span>  
+                                    </span><br><br>
+                                    <button type="button" id="favBtn">Add booking to favourites</button>                             
+                                    <button type="button" id="bookBtn">Book Now</button>                             
+                                    <button type="button" id="loyaltyBtn">Check Loyalty</button>&nbsp;
+                                    <span id="loyalty">                                        
+                                    </span>
+                                    <br>                           
+                                </fieldset>
+                            </form>  
+                        </section>
+                    </div>
+                </div>
+            </div>                               
+            <div class="container"><!--Will hold text and images together, horizontally-->
+                <div class="coverimg"><!--The cover image of the home page-->
+                    <img src="Images/Booking/adventurebooking.jpeg" alt='coverimage'>
+                    <div class="textoverimg">
+                        <section><!--This will include the booking form for the adventures-->
+                            <form id="adventureForm"><!--The form to book adventures at the hotel-->
+                                <fieldset>
+                                    <legend>
+                                        <h2>Book adventures</h2>
+                                    </legend>
+                                    <label>Full Name:</label>
+                                        <input type="text" name="fullName2" maxlength="100" id="fullName2Input" >&nbsp;&nbsp;&nbsp;                                                                               
+                                    <label>Contact No.:</label>
+                                        <input type="tel" name="phoneNum2" maxlength="10" id="phoneNum2Input" >&nbsp;&nbsp;&nbsp;
+                                    <label>Email Address:</label>
+                                        <input type="email" name="email2" id="email2Input" placeholder="example@gmail.com" >&nbsp;&nbsp;&nbsp;         
+                                    <br> 
+                                    <label>Local Adults:</label>
+                                        <input type="number" name="numOfLocalAdults" id="localAdultsInput" min="1" max="100">&nbsp;&nbsp;&nbsp; 
+                                    <label>Local Kids (above 5 years):</label>
+                                        <input type="number" name="numOfLocalKids" id="localKidsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
+                                    <label>Foreign Adults:</label>
+                                        <input type="number" name="numOfForeignAdults" id="foreignAdultsInput" min="0" max="100">&nbsp;&nbsp;&nbsp;
+                                    <label>Foreign Kids:</label>
+                                        <input type="number" name="numOfForeignKids" id="foreignKidsInput" min="0" max="100"><br><br>
+                                    <label>Date:</label>
+                                        <input type="date" name="day" id="dayInput" >&nbsp;&nbsp;&nbsp;
+                                    <label>Hours:</label>
+                                        <input type="number" name="numOfHours" id="hoursInput" min="1" value="1" >&nbsp;&nbsp;&nbsp;
+                                    <h3>Adventure:</h3>
+                                    <input type="radio" id="surfing" value="Surfing" name="adventures">
+                                        <label>Surfing</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="whaleWatching" value="Whale Watching" name="adventures">
+                                        <label>Whale Watching</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="diving" value="Diving" name="adventures">
+                                        <label>Diving</label>
+                                    <h3>Extra:</h3>
+                                    <input type="checkbox" id="guide" value="guide" name="guide">
+                                        <label>Include a Guide</label><br><br>
+                                    <h3>
+                                        Payment Details:
+                                    </h3>
+                                    <input type="radio" id="adventureCash" value="Cash" name="adventurePayment">
+                                        <label>Cash</label>&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" id="adventureCard" value="Card" name="adventurePayment">
+                                        <label>Card&nbsp;&nbsp;&nbsp;</label>
+                                    <span>
+                                        Current Cost:&nbsp;<span id="currentAdventureCost">LKR 0.00</span>  
+                                    </span>&nbsp;&nbsp;&nbsp;
+                                    <span>
+                                        Overall Cost:&nbsp;<span id="overallAdventureCost">LKR 0.00</span>  
+                                    </span><br><br>
+                                    <button type="button" id="adventureFavBtn">Add booking to favourites</button>              
+                                    <button type="button" id="bookAdventureBtn">Book Adventure</button>
+                                    <button type="button" id="showAdventuresBtn">Show Adventures</button>
+                                </fieldset>
+                            </form>   
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p id="addedCost">Total Cost: LKR 0.00</p>
+                <h2 id="detailHeading">
+                    Hotel Bookings
+                </h2>            
+                <p id="details">
+                </p><br><br>                 
+                <h2 id="adDetailHeading">
+                    Adventure Bookings
+                </h2>            
+                <p id="adventureDetails">
+                </p><br><br>
+            </div>                 
+        </main>
+        <footer><!--Includes the contact details and the copyright claim-->
+            <h2><!--Basic contact details-->
+                Contact Us:&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="contact">
+                    hoteljewel@gmail.com&nbsp;&nbsp;&nbsp;
+                    <span class="line">
+                        |
+                    </span>
+                    +94 77 241 3241&nbsp;&nbsp;&nbsp; 
+                    <span class="line">
+                        |
+                    </span>
+                </span>
+                <span class="scrolltotop"><!--Animated, keeps switching colours-->
+                    <a class="scrolltotop" href="Book.html">
+                        ↑
+                    </a>
+                </span>
+            </h2><br>
+            <p class="copyright">
+                <i>All rights reserved - Hotel Jewel - © 2023 | Designed by Viduni Pelpola</i>
+            </p>
+            <!--
+            References
+            Unsplash (2018). Photo by Xavier Coiffic on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/lQ4mfS5Le6M [Accessed 19 July 2023]
+            Unsplash (2018). Photo by Zany Jadraque on Unsplash. [online] unsplash.com. Available at: https://unsplash.com/photos/photography-of-beach-resort-during-golden-hour-ZCRtfop2hZY [Accessed 1 December 2023]
+            ‌-->
+        </footer>
+    </body>
+</html>

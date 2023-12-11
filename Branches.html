@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Branches - Hotel Jewel 
+        </title>
+        <link rel="stylesheet" href="CSS/Main.css">
+        <!--For the favicon-->
+<link rel="apple-touch-icon" sizes="180x180" href="./Images/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./Images/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./Images/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <link rel="mask-icon" href="./Images/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./Images/Favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="./Images/Favicon/browserconfig.xml">
+        <meta name="theme-color" content="#5e2b17">
+    </head>
+    <body>
+        <header><!--A transluscent banner, with the name of the hotel, and the navigation menu-->
+            <div class="banner"><!--A translucent banner at the top of the page that will include the logo, hotel name and navigation bar-->
+                <img class="logo" src="Images/logo.png" alt='logo'>
+                <span class="hotelname">
+                    Hotel Jewel
+                </span><br>
+                <nav><!--This will include links to all the other pages-->
+                    <a href="index.html">Home</a> <span class="line">|</span><span class="newline"><br></span> 
+                    <a href="Branches.html"><i>Branches</i></a><span class="line"> |</span><span class="newline"><br></span>  
+                    <a href="Adventures.html">Adventures</a> <span class="line">|</span><span class="newline"><br></span> 
+                    <span class="dropdown"> 
+                        <a href="Restaurants.html">Restaurants<span class="triangle">&#9662;</span></a><span class="newline"><br></span> 
+                        <div class="dropdowncontent">
+                            <a href="Weddings.html">Weddings</a><br>
+                            <a href="Parties.html">Parties</a>
+                        </div> <span class="line">|</span>
+                    </span> 
+                    <a href="Book.html">Book</a><br>&nbsp;
+                </nav>
+            </div>      
+        </header>
+        <div class="coverimg">
+            <img src="Images/Branches/branchcover.jpeg" alt="branches cover image">
+        </div>
+        <main><!--Everything apart from the head, header and footer-->
+            <section><!--This will list the branches, and will include a brief description of each branch-->
+                <h1>
+                    Our Branches
+                </h1>
+                <div class="container"><!--Will hold text and images together, horizontally-->
+                    <div class="imgcont">
+                        <figure>
+                            <img src="Images/Branches/bentota.jpeg" alt="Bentota">
+                            <figcaption>
+                                Bentota
+                                <br>
+                                <span class="desc">
+                                    Located next to a strip of beach renowned for its astounding beauty.
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="imgcont">
+                        <figure>
+                            <img src="Images/Branches/negombo.jpeg" alt="Negombo">
+                            <figcaption>
+                                Negombo
+                                <br>
+                                <span class="desc">
+                                    In close proximity to Sri Lanka's commercial capital, and extremely scenic
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="imgcont">
+                        <figure>
+                            <img src="Images/Branches/trincomalee.jpeg" alt="Trincomalee">
+                            <figcaption>
+                                Trincomalee
+                                <br>
+                                <span class="desc">
+                                    Relax in the beautiful northeast, located close to many local landmarks
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </div>    
+                </div>
+            </section>
+            <section><!--This will include the table that gives a brief summary of the facilities available in each branch, and where they're located-->
+                <h1>An overview..</h1>
+                <div class="tablecont">
+                    <table>
+                        <tr>
+                            <th>Branch</th>
+                            <th>Accomodation</th>
+                            <th>&nbsp;Dining Options&nbsp;</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr>
+                            <td class="branchname"><!--Class used to add styling to the names of each branch-->
+                                <b>Bentota</b>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Single</li>
+                                    <li>Double</li>
+                                    <li>Triple</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Indoor</li>
+                                    <li>Outdoor</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <iframe class="branchlocation" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d991.1895433399535!2d79.9946758849933!3d6.425108370316767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjUnMzAuNCJOIDc5wrA1OSc0My4yIkU!5e0!3m2!1sen!2slk!4v1692667806405!5m2!1sen!2slk"></iframe>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="branchname">
+                                <b>Negombo</b>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Single</li>
+                                    <li>Double</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Indoor</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <iframe class="branchlocation" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3958.732519244657!2d79.82300407807259!3d7.156892297061149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDknMjQuOCJOIDc5wrA0OSc0MC40IkU!5e0!3m2!1sen!2slk!4v1692667905942!5m2!1sen!2slk"></iframe>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="branchname">
+                                <b>&nbsp;Trincomalee&nbsp;</b>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Single</li>
+                                    <li>Double</li>
+                                    <li>Triple</li>
+                                    <li>Deluxe Suites</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Indoor</li>
+                                    <li>Outdoor</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <iframe class="branchlocation" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1972.274736185345!2d81.22199530133823!3d8.639175111263643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMzgnMjEuMCJOIDgxwrAxMycyMi45IkU!5e0!3m2!1sen!2slk!4v1692676487803!5m2!1sen!2slk"></iframe>
+                            </td>
+                        </tr>
+                        <tfoot>
+                            <tr>
+                            <td class="noborder">
+                                Contact us for more details
+                            </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <p>
+                <span class="bookbutton"><!--A button that takes the user directly to the booking page-->
+                    <a class="bookbutton" href="Book.html">
+                        Book Now
+                    </a>
+                </span>
+            </p><br>
+        </main>
+        <footer><!--Includes the contact details and the copyright claim-->
+            <h2><!--Basic contact details-->
+                Contact Us:&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="contact">
+                    hoteljewel@gmail.com&nbsp;&nbsp;&nbsp;
+                    <span class="line">
+                        |
+                    </span>
+                    +94 77 241 3241&nbsp;&nbsp;&nbsp; 
+                    <span class="line">
+                        |
+                    </span>
+                </span>
+                <span class="scrolltotop"><!--Animated, keeps switching colours-->
+                    <a class="scrolltotop" href="Branches.html">
+                        ↑
+                    </a>
+                </span>
+            </h2><br>
+            <p class="copyright">
+                <i>All rights reserved - Hotel Jewel - © 2023<span class='line'>|</span> Designed by Viduni Pelpola</i>
+            </p>
+            <!--
+            References
+            www.thambapannileisure.com. (n.d.). Hotels in Unawatuna <span class="line">|</span> Thambapanni Leisure. [online] Available at: https://www.thambapannileisure.com/# [Accessed 19 July 2023]
+            Bstatic.com. (2023). Available at: https://cf.bstatic.com/xdata/images/hotel/max1280x900/248464739.jpeg?k=c4b267906987a43fa5e6a7b91ff7e2842b6f50f4f2774ad982682c32514c7ae3&o=&hp=1 [Accessed 19 July 2023]
+            ‌Bstatic.com. (2023). Available at: https://cf.bstatic.com/xdata/images/hotel/max1280x900/473338342.jpeg?k=fabc0f4fede35db7d476899c8adcda2a8e041d3e8b2d1d021e509a20402b71f7&o=&hp=1 [Accessed 19 July 2023]
+            oakrayhotels.com. (n.d.). Available at: https://www.oakrayhotels.com/oak-ray-haridra/wp-content/uploads/sites/51/2018/10/IMG_0446.jpeg
+            Google Maps. (n.d.). Google Maps. [online] Available at: https://www.google.com/maps?ll=6.425108 [Accessed 23 Aug. 2023]
+            Google Maps. (n.d.). Google Maps. [online] Available at: https://www.google.com/maps?ll=7.156892 [Accessed 23 Aug. 2023]
+            Google Maps. (n.d.). Google Maps. [online] Available at: https://www.google.com/maps/place/8%C2%B038 [Accessed 23 Aug. 2023]
+            -->
+        </footer>
+    </body>
+</html>
+

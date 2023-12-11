@@ -1,0 +1,1300 @@
+a /*Specifying the colours of all the links*/{
+    color: rgb(248, 218, 179);
+    text-decoration: none;
+}
+
+#adultsInput, #hoursInput, #kidsInput, #smallKidsInput, #daysInput, #singleInput, #doubleInput, #tripleInput, #localAdultsInput, #localKidsInput, #foreignAdultsInput, #foreignKidsInput, #hoursInput {
+    max-width: 35px;
+    font-size: 20px;
+}
+
+.adv /*The iframes in the adventures page*/ {
+    padding-top: 20px;
+    border: none;
+}
+
+.accomodation /*This is for the section that includes details about the rooms, with two images*/ {
+    text-align: right;
+    margin-right: 1px;
+}
+
+.banner /*This is for the section on top of the webpages that will include the logo, hotel name, and navigation bar*/ {
+    background-color:rgba(0, 0, 0, 0.5);
+    opacity: 80%;
+    font-size: 500% ;
+    color:rgb(248, 218, 179);
+    padding-left: 20px;
+    padding-right: 26px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'Adobe Devanagari', 'Optima', 'Times New Roman', Times, serif;
+    background-position: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+    position: absolute;
+    margin-top: 0;
+    z-index: 1;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgb(248, 218, 179);
+    color: #4F2413;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: aqua;
+    border: 1px solid #4F2413;
+    box-shadow: 8px 8px 20px #4F2413;
+    padding-top: 20px;
+    z-index: 9999;
+    padding-bottom: 1px;
+    text-align: center;
+}
+
+.close {
+    font-size: 20px;
+    color: white;
+    background-color: rgb(167, 32, 5);
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #4f241382;
+}
+
+.close:hover{
+    background-color: rgb(168, 113, 102);
+}
+
+#details, #adventureDetails {
+    color: #4F2413;
+    background-color: rgb(248, 218, 179);
+    border: 25px solid rgb(79, 36, 19, 0.5);;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bookbutton /*A button at the bottom of each page, before the footer, that takes the user to the booking page*/ {
+    background-color: #4F2413;
+    border: none;
+    color: rgb(248, 218, 179);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.bookbutton:hover, input[type="submit"]:hover {
+    opacity: 50%;
+}
+
+button {
+    background-color: #4F2413;
+    color: antiquewhite;
+    font-family: 'Adobe Devanagari', 'Optima', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 140px;
+    padding: 10px;
+    margin-right: 4px;
+    box-shadow: 2px 4px 10px #67483c;
+}
+
+#adventureFavBtn, #adventureFavBtn {
+    background-color: #4F2413;
+    color: antiquewhite;
+    font-family: 'Adobe Devanagari', 'Optima', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 250px;
+    padding: 10px;
+    margin-right: 4px;
+}
+
+.bookbutton:hover, input[type="submit"]:hover, button:hover {
+    opacity: 50%;
+}
+
+.bookingHeading{
+    padding-bottom: 0px;
+}
+
+.branchname /*For the name of each branch, in the branches page*/ {
+    font-size: 190%;
+    text-align: center;
+}
+
+.contact /*This is for the phone number and email, in the footer of each page*/ {
+    font-size: 80%;
+    color: #4F2413;
+}
+
+.copyright /*The copyright claim at the bottom of each page*/ {
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #4F2413; 
+    font-size: 100% ;
+    text-align:left;
+    margin-left: 3px;
+}
+
+.coverimg /*The image at the beginning of each webpage*/ {
+    position: relative;
+    display: inline-block;
+}
+
+.coverimg img {
+    height: auto; 
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    align-items: center;
+
+}
+
+.container /*A class created for text an images to be placed together, horizontally*/ {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.desc /*A small description of each branch, under the branch name*/ {
+    font-size: 85%;
+    color: #4F2413;
+}
+
+.dropdown /*For the links of the two event pages, in the navigation bar*/ {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;;
+    min-width: 160px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown:hover .dropdowncontent {
+    display: block;
+}
+
+figcaption {
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    font-size: 125%;
+    text-align: center;
+    margin-right: 30px;
+    color: #4F2413;
+}
+
+figcaption a {
+    color: #4F2413;
+}
+
+figcaption a:hover {
+    text-decoration: underline;
+}
+
+figure {
+    margin-right: 0.5px;
+    margin-left: 0.25px;
+}
+
+footer {
+    border-top: 1px solid #4F2413;
+    background: none;
+}
+
+form /*The booking form, in the booking page*/ {
+    text-align: left;
+    margin-top: 100px;
+    font-size: 25px;
+    margin-top: -10px;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+form fieldset {
+    min-width: 1150px;
+    border: 1px solid #4F2413;
+}
+
+form input{
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #4F2413; 
+    font-size: 90%;
+}
+
+form legend {
+    color: #4F2413;
+}
+
+form ::placeholder {
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #a4a2a1; 
+    font-size: 90%; 
+}
+
+h1 {
+    font-family: 'Adobe Devanagari', 'Optima', 'Times New Roman', Times, serif;
+    color: rgb(248, 218, 179);
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(248, 218, 179), #ff8c00, #69311a, #ff8c00, rgb(248, 218, 179) );
+    padding: 5px;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px black;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: 'Adobe Devanagari', 'Optima', 'Times New Roman', Times, serif;
+    color: #4F2413;
+}
+
+.hotelname /*For the hotel name in the banner*/ {
+    text-align: center;
+    margin-right: 113px;
+}
+
+iframe {
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    margin-right: 5px;
+    border: none;
+}
+
+img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.imgcont /*A class for images in every webpage*/ {
+    display: flex;
+}
+
+.imgcont img, .adv /*'.adv' is to specify the iframes' size in the adventures page*/ {
+    margin-right: 10px;
+    align-items: center;
+    height: 740.69077757685px; 
+    width: 1501.5px;
+    height: 296.875px; 
+    width: 475px; 
+    margin-left: 15px;
+    margin-top: 0px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+    transform: scale(2);
+}
+
+input[type="submit"]{
+    background-color: #4F2413;
+    border: none;
+    color: rgb(248, 218, 179);
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+@keyframes scrollanimation /*The animation for a small button in the footer of each webpage, that takes the user to the top of that page*/ {
+    from {
+        background-color: #4F2413;
+    }
+    to {
+        background-color: rgb(248, 218, 179);
+    }
+    from {
+        color: rgb(248, 218, 179);
+    }
+    to {
+        color: #4F2413;
+    }
+}
+
+.logo /*The hotel's logo, in the banner at the top of each page*/ {
+    width: 50px;
+    height: 50px;
+    opacity: 50%;
+    margin-right: 460px;
+}
+
+#loyalty {
+    border-left: 1px solid #4F2413;
+    padding-left: 10px;
+}
+
+nav /*The navigation bar, in the banner, on top of the webpages*/ {
+    font-size: 25%;
+    text-align: center;
+    color: rgb(248, 218, 179);
+    text-shadow: none;
+    font-family: 'Adobe Devanagari', 'Optima', 'Adobe Devanagari', 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 105px;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+nav a {
+    text-shadow: 1px 1px 2px black;
+}
+
+nav a:hover {
+    background-color: rgb(248, 218, 179);
+    color: black;
+    font-weight: bolder;
+    opacity: 50%;
+    text-decoration: underline;
+}
+
+.newline /*Includes extra <br> tags*/ {
+    display: none;
+}
+
+.noborder /*To make the border around the table footer appear invisible*/ {
+    border: 1px solid rgb(248, 218, 179);
+}
+
+ol {
+    margin-right: 80px;
+}
+
+p {
+    color: #4F2413;
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    font-size: 190%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+p a /*For links placed inside a paragraph*/ { 
+    color: #4F2413;
+    font-size: 60%;
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    text-align: left;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+.scrolltotop /*A small button that takes the user to the top of that particular page*/ {
+    background-color: #4F2413;
+    border: none;
+    border-radius: 20px;
+    color: rgb(248, 218, 179);
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    animation-name: scrollanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.scrolltotop :hover {
+    opacity: 50%;   
+}
+
+select {
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #4F2413;
+    font-size: 100%;
+}
+
+.subheading /*For the headings of the dining options in the restaurants page*/ {
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #4F2413;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 250%;
+    text-decoration:underline 2.4px;
+}
+
+table {
+    color: #4F2413;
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    border-color: #4F2413;
+}
+
+table, th, td {
+    border: 1px solid #4F2413;
+    margin: 0;
+}
+
+.tablecont /*For the contents of the table in the branches page*/ {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+table ul {
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+}
+
+td {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.textoverimg /*To place the form in the booking page on top of the cover image (.coverimg img)*/ {
+    background-color:rgba(228, 226, 226, 0.9);
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    color: #4F2413;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    font-size: 190%;
+    text-align: left;
+}
+
+th{
+    font-size: 200%;
+    padding: 7px;
+}
+
+#addedCost{
+    text-align: center;
+}
+
+ul, ol {
+    color: #4F2413;
+    font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+    font-size: 190%;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    align-items: center;
+}
+
+.ulcont,.olcont /*For the text in both ordered and unordered lists*/ {
+    text-align: center;
+}
+#adventureFavBtn{
+    margin-left: 140px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 699px) {
+    .banner{
+        font-size: 120%;
+        padding-top: 5px;
+        padding-left: 1px;
+        font-weight: bolder;
+        background-color:rgba(0, 0, 0, 0);
+        opacity: 100%;
+    }
+
+    button, #bookAdventureBtn, #adventureFavBtn{
+        font-size: 5px;
+        margin-left: 90px;
+        padding: 0;
+        margin-top: -20px;
+    }
+
+    form {
+        min-width: 200px;
+    }
+
+    #adventureForm {
+        margin-top: 50px;
+    }
+
+    #adventureForm button{
+        margin-left: 40px;
+    }
+
+    label {
+        font-size: 5px;
+    }
+
+    #adultsInput, #kidsInput, #smallKidsInput, #daysInput, #singleInput, #doubleInput, #tripleInput, #localAdultsInput, #localKidsInput, #foreignAdultsInput, #foreignKidsInput {
+        font-size: 2px;
+        max-width: 10px;
+        margin-bottom: 1px;
+    }
+
+    #hotelForm{
+        width: 300px;
+        margin-top: 85px;
+    }
+
+    #detailHeading, #adDetailHeading{
+        font-size: 17px;
+    }
+    #details, #adventureDetails{
+        font-size: 0.55rem;
+    }
+
+    .popup{
+        top:15%;
+    }
+
+    h3{
+       margin-top: 1px; 
+       margin-bottom: 5px; 
+    }
+
+    form h2 {
+        font-size: 10px;}
+    
+
+    form input, #hoursInput {
+        font-size: 2px;
+        margin-bottom: 12px;
+        max-width: 70px;
+    }
+
+    .textoverimg {
+        background:none;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        color: #4F2413;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 55%;
+        left: 50%;
+        font-size: 190%;
+        text-align: left;
+    }
+
+    .branchlocation{
+        height: 50%;
+        width: 100%;
+    }
+
+    .branchname {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .bookbutton {
+        font-size: 90%;
+    }
+
+    .container {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .coverimg img {
+        top: 0;
+        height: auto;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .dropdowncontent {
+        display: none;
+        position: absolute;
+        min-width: 0px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .dropdown:hover .dropdowncontent {
+        display: none;
+    }
+
+    form {
+        text-align: left;
+        font-size: 40%;
+        opacity: 99%;
+        margin-top: 120px;
+    }
+
+    form fieldset {
+        min-width: 300px;
+        margin-right: 0;
+        background-color: rgba(250, 235, 215, 0.8);
+    }
+
+    footer {
+        font-size: 70%;
+    }
+
+    h1 {
+        font-size: 180%;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        background-color: rgb(248, 218, 179);
+        font-weight: lighter;
+    }
+
+    form h2{
+        margin-bottom: 0;
+    }
+
+    #hotelForm button {
+        margin-left: 40px;
+    }
+
+    h3{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .hotelname{
+        margin-left: 10px;
+        margin-right: 29px;
+        font-size: 12px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgcont img, .adv{
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    input[type="submit"]{
+        font-size: 14px;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .imgcont img:hover {
+        transform: scale(1, 1);
+    }
+
+    input[type="checkbox"], input[type="radio"]{
+        transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        margin-top: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+    } 
+
+    .line{
+        display: none;
+    }
+
+    .logo {
+        width: 15px;
+        height: 15px;
+        margin-right: 90px;
+        margin-left: 20px;    
+    }
+
+    .nav {
+        margin-left: 30.6px;
+        margin-right: 0px;
+        margin-top: 0;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .nav a {
+        color: rgb(248, 218, 179);
+        padding-left: 0.1px;
+        padding-top:0;
+        padding-bottom: 1px;
+        text-shadow: 10px 1px 2px black;
+    }
+    
+    .newline{
+        display: contents;
+    }
+
+    .scrolltotop {
+        font-size: 13px;
+    }
+
+    .subheading{
+        font-size: 28px;
+    }
+    
+    .tablecont {
+        align-items: center;
+        justify-content: center;
+    }
+
+    table {
+        color: #4F2413;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        border-color: #4F2413;
+    }
+
+    table ul {
+        margin-top: 1.5px;
+        margin-bottom: 1.5px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    td {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+    }
+
+    .textoverimg {
+        top: 40%;
+        font-size: 100%;
+        text-align: center;
+    }
+
+    th {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    ul, ol, p {
+        font-size: 100%;
+        margin: 5px;
+    }   
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 800px) and (max-width: 1000px) {
+    .banner{
+        font-size: 320%;
+        padding-top: 10px;
+        padding-left: 125px;
+        font-weight: bolder;
+        background-color:rgba(0, 0, 0, 0);
+        opacity: 100%;
+    }
+
+    button, #adventureFavBtn {
+        font-size: 11px;
+        margin-left: 90px;
+        padding: 0.5%;
+    }
+
+    #adventureForm button {
+        margin-left: 170px;
+    }
+
+    #adultsInput, #hoursInput, #kidsInput, #smallKidsInput, #daysInput, #singleInput, #doubleInput, #tripleInput, #localAdultsInput, #localKidsInput, #foreignAdultsInput, #foreignKidsInput {
+        font-size: 10px;
+        max-width: 12px;
+        margin-bottom: 1px;
+    }
+    form input {
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+
+    .textoverimg {
+        background:none;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        color: #4F2413;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 55%;
+        left: 50%;
+        font-size: 190%;
+        text-align: left;
+    }
+
+    .branchlocation{
+        height: 50%;
+        width: 100%;
+    }
+
+    .branchname {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .bookbutton {
+        font-size: 90%;
+    }
+
+    .container {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .coverimg img {
+        top: 0;
+        height: auto;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .dropdowncontent {
+        display: none;
+        position: absolute;
+        min-width: 0px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .dropdown:hover .dropdowncontent {
+        display: none;
+    }
+
+    form {
+        text-align: left;
+        font-size: 100%;
+        opacity: 99%;
+        margin-top: 150px;
+        width: 175%;
+        margin-left: -150px;
+    }
+
+    form fieldset {
+        min-width: 300px;
+        margin-right: 0;
+        background-color: rgba(250, 235, 215, 0.8);
+    }
+
+    footer {
+        font-size: 70%;
+    }
+
+    h1 {
+        font-size: 180%;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        background-color: rgb(248, 218, 179);
+        font-weight: lighter;
+        
+    }
+
+    .hotelname{
+        margin-right: 29px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgcont img, .adv{
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    input[type="submit"]{
+        font-size: 14px;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .imgcont img:hover {
+        transform: scale(1, 1);
+    }
+
+    input[type="checkbox"], input[type="radio"]{
+        transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        margin-top: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+    } 
+
+    .line{
+        display: none;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 110px;
+        margin-left: 0;    
+    }
+
+    .nav {
+        margin-left: 30.6px;
+        margin-right: 0px;
+        margin-top: 0;
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .nav a {
+        color: rgb(248, 218, 179);
+        padding-left: 0.1px;
+        padding-top:0;
+        padding-bottom: 1px;
+        text-shadow: 10px 1px 2px black;
+    }
+    
+    .newline{
+        display: contents;
+    }
+
+    .scrolltotop {
+        font-size: 13px;
+    }
+
+    .subheading{
+        font-size: 28px;
+    }
+    
+    .tablecont {
+        align-items: center;
+        justify-content: center;
+    }
+
+    table {
+        color: #4F2413;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        border-color: #4F2413;
+    }
+
+    table ul {
+        margin-top: 1.5px;
+        margin-bottom: 1.5px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    td {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+    }
+
+    .textoverimg {
+        top: 40%;
+        font-size: 100%;
+        text-align: center;
+    }
+
+    th {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    ul, ol, p {
+        font-size: 100%;
+        margin: 5px;
+    }   
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 700px) and (max-width: 799px) {
+    .banner{
+        font-size: 220%;
+        padding-top: 10px;
+        padding-left: 125px;
+        font-weight: bolder;
+        background-color:rgba(0, 0, 0, 0);
+        opacity: 100%;
+    }
+
+    button {
+        font-size: 5px;
+        margin-left: 90px;
+        padding: 0.5%;
+    }
+
+    form button, #adventureFavBtn {
+        font-size: 10px;
+        margin-left: 90px;
+        padding: 0.5%;
+    }
+    
+    #adventureForm button {
+        margin-left: 85px;
+    }
+
+    form {
+        min-width: 505px;
+    }
+
+    #adultsInput, #hoursInput, #kidsInput, #smallKidsInput, #daysInput, #singleInput, #doubleInput, #tripleInput, #localAdultsInput, #localKidsInput, #foreignAdultsInput, #foreignKidsInput {
+        font-size: 10px;
+        max-width: 12px;
+        margin-bottom: 1px;
+    }
+
+    h3{
+       margin-top: 5px; 
+       margin-bottom: 5px; 
+    }
+
+    form h2 {
+        font-size: 16px;
+    }
+
+    form input, #hoursInput {
+        font-size: 10px;
+        margin-bottom: 12px;
+        max-width: 70px;
+    }
+
+    .textoverimg {
+        background:none;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        color: #4F2413;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 55%;
+        left: 50%;
+        font-size: 190%;
+        text-align: left;
+    }
+
+    .textoverimg {
+        background:none;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        color: #4F2413;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 55%;
+        left: 50%;
+        font-size: 190%;
+        text-align: left;
+    }
+
+    .branchlocation{
+        height: 50%;
+        width: 100%;
+    }
+
+    .branchname {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .bookbutton {
+        font-size: 90%;
+    }
+
+    .container {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .coverimg img {
+        top: 0;
+        height: auto;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .dropdowncontent {
+        display: none;
+        position: absolute;
+        min-width: 0px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .dropdown:hover .dropdowncontent {
+        display: none;
+    }
+
+    form {
+        text-align: left;
+        font-size: 90%;
+        opacity: 99%;
+        margin-top: 140px;
+        width: 175%;
+        margin-left: -130px;
+    }
+
+    form fieldset {
+        min-width: 300px;
+        margin-right: 0;
+        background-color: rgba(250, 235, 215, 0.8);
+    }
+
+    footer {
+        font-size: 70%;
+    }
+
+    h1 {
+        font-size: 180%;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        background-color: rgb(248, 218, 179);
+        font-weight: lighter;
+        
+    }
+
+    .hotelname{
+        margin-right: 29px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .imgcont img, .adv{
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    input[type="submit"]{
+        font-size: 14px;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .imgcont img:hover {
+        transform: scale(1, 1);
+    }
+
+    input[type="checkbox"], input[type="radio"]{
+        transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        margin-top: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+    } 
+
+    .line{
+        display: none;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 110px;
+        margin-left: -30px;    
+    }
+
+    .nav {
+        margin-left: 30.6px;
+        margin-right: 0px;
+        margin-top: 0;
+        text-align: right;
+    }
+
+    .nav a {
+        color: rgb(248, 218, 179);
+        padding-left: 0.1px;
+        padding-top:0;
+        padding-bottom: 1px;
+        text-shadow: 10px 1px 2px black;
+    }
+    
+    .newline{
+        display: contents;
+    }
+
+    .scrolltotop {
+        font-size: 13px;
+    }
+
+    .subheading{
+        font-size: 28px;
+    }
+    
+    .tablecont {
+        align-items: center;
+        justify-content: center;
+    }
+
+    table {
+        color: #4F2413;
+        font-family: 'Optima', 'Adobe Devanagari', 'Times New Roman' , Times, serif;
+        border-color: #4F2413;
+    }
+
+    table ul {
+        margin-top: 1.5px;
+        margin-bottom: 1.5px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    td {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 10px;
+    }
+
+    .textoverimg {
+        top: 40%;
+        font-size: 100%;
+        text-align: center;
+    }
+
+    th {
+        font-size: 10px;
+        padding: 7px;
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    ul, ol, p {
+        font-size: 100%;
+        margin: 5px;
+    }   
+}
+
+@media (width:768px){
+   form{
+        margin-left: -170px;
+    }
+}
