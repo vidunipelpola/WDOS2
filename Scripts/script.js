@@ -1,7 +1,7 @@
 // For the Hotel Booking form
 
-// Referring the DOM elements
-const hotelBooking = document.getElementById("hotelForm");
+// Referring the DOM elements of the Hotel Booking
+const hotelBooking = document.getElementById("hotelForm"); //This is the id of the form, assigned so that it can be reset easily
 const fullName = document.getElementById("fullNameInput");
 const phoneNumber = document.getElementById("phoneNumInput");
 const email = document.getElementById("emailInput");
@@ -30,16 +30,15 @@ const detailsParagraph = document.getElementById("details");
 bookButton.addEventListener('click', () =>{
     if(validateForm()){ // This is so that the booking is made only if the form has all the necessary input
         bookStay();// Triggers the book function, once all the necessary fields are filled out
-        updateTotalCost();
+        updateTotalCost();// This updates the total cost of both the hotel and adventure bookings, at the bottom of the page
     }
 });
 addToFavButton.addEventListener('click', () =>{
-    if(validateForm()){ // This is so that the booking is made only if the form has all the necessary input
-       addToFavourites();// Triggers a function that uses local storage to add a particular booking to favourites
-        
+    if(validateForm()){ // This is so that favourites can be added only if all details are given
+       addToFavourites();// Triggers a function that uses local storage to add a particular booking's input to favourites        
     }
 });
-checkLoyalty.addEventListener('click', checkLoyaltyPoints); // Triggers a function that allows the user to check how many loyalty points they hae
+checkLoyalty.addEventListener('click', checkLoyaltyPoints); // Triggers a function that allows the user to check how many loyalty points they have, depending on the number of rooms booked
 
 // The input fields that are going to trigger a function that changes the cost displayed in the form
 singleRooms.addEventListener('input', updateCost);
@@ -51,10 +50,8 @@ numOfKids.addEventListener('input', updateCost);
 numOfDays.addEventListener('input', updateCost);
 anExtraBed.addEventListener('input', updateCost);
 promoCode.addEventListener('input', updateCost);
-let totalRoomsBooked = 0;
 
-
-function updateCost() {// This function updates the amount the current booking in progress will cost, according to the changes made in the input fields
+function updateCost() {// This function updates the amount the current booking that is in progress will cost, according to the changes made in the input fields
 
     //Declaring the values of each room unit
     const singleRoomCost = 25000;
@@ -63,7 +60,7 @@ function updateCost() {// This function updates the amount the current booking i
     const overFiveCost = 5000;
     const extraBedCost = 8000;
 
-    const promoCodeValue = "Promo123";
+    const promoCodeValue = "Promo123";// If the user enters this code in the input field for the promo code, they will be given a discount
 
     // Processing the number of units, so that the cost can be multiplied accordingly   
     const numSingleRooms = parseInt(singleRooms.value) || 0;
@@ -74,7 +71,7 @@ function updateCost() {// This function updates the amount the current booking i
     const numDays = parseInt(numOfDays.value) || 1;
     const hasExtraBed = document.getElementById('extraBed').checked;
     const enteredPromoCode = promoCode.value;
-    let discount = 0;
+    let discount = 0;// This is the discount that will change depending on whether or not the right promo code is entered
 
     //Entering the calculation for the booking cost
     let totalCost =
@@ -83,48 +80,46 @@ function updateCost() {// This function updates the amount the current booking i
             numTripleRooms * tripleRoomCost +
             (numAdults + numKids) * overFiveCost) * numDays);
     
-    if (hasExtraBed) {
+    if (hasExtraBed) {// This will add an extra amount to the cost if the option to get an extra bed is selected
         totalCost += extraBedCost * numDays;
     }
     
-    if (enteredPromoCode === promoCodeValue) {
+    if (enteredPromoCode === promoCodeValue) {// This will reduce 5% from the cost if 'Promo123' is typed in
         discount = totalCost * 0.05;
     }
     
     totalCost -= discount; // Subtract the discount from the total cost
     
-    costText.innerText = `LKR ${totalCost.toFixed(2)}`;
+    costText.innerText = `LKR ${totalCost.toFixed(2)}`;// This dynamically changes the cost of the current booking, depending on the changes made in input fields like the rooms, nmber of people, or number of days
 
     //This returns the final value of the cost of the booking, and changes when any updates are made
     return totalCost;
 } 
 
-function validateForm() {
+function validateForm() {//This the function used to ensure that the user enters the correct input, and has filled out all fields required for a booking to be made
     const fullNameValue = fullName.value;
     const phoneNumberValue = phoneNumber.value;
     const emailValue = email.value;
     const checkInDateValue = checkIn.value;
-    const numOfDaysValue = parseInt(numOfDays.value) || 0; // Parsing number of days
+    const numOfDaysValue = parseInt(numOfDays.value) || 0;// This shows that the number of days should be taken as 0 if the user hasn
     const cashPayment = document.getElementById('cash');
     const cardPayment = document.getElementById('card');
     
-    if (fullNameValue === "" || phoneNumberValue === "" || emailValue === "" || checkInDateValue === "" || numOfDaysValue <= 0) {
-        alert("Please fill in all  fields");
-        return false;
+    if (fullNameValue === "" || phoneNumberValue === "" || emailValue === "" || checkInDateValue === "" || numOfDaysValue <= 0) {// This raises an alert if any booking detail has not been filled
+        alert("Please fill in all fields");
+        return false;// This doesn't allow the form to be submitted, or details added to favourites 
     }
 
-    if (!cashPayment.checked && !cardPayment.checked) {
+    if (!cashPayment.checked && !cardPayment.checked) {// This is to raise an alert if neither cash nor card has been selected as a payment optiono
         alert("Please select a payment method");
         return false;
     }
     
-    return true;
+    return true;// This allows the system to proceed with the booking, and adding its details to favourites
 }
-    
-let overallCost = 0;
 
-function addToFavourites() {
-    const bookingDetails = {
+function addToFavourites() {// This function saves the details entered in a particular booking to local storage, overwriting any existing favourite
+    const bookingDetails = {// This is the constant that the details will be saved as
         checkInDate: checkIn.value,
         singleRooms: singleRooms.value,
         doubleRooms: doubleRooms.value || 0,
@@ -143,9 +138,27 @@ function addToFavourites() {
     localStorage.setItem('favouriteHotelBooking', JSON.stringify(bookingDetails));
 }
 
+function checkLoyaltyPoints() {// The function that checks the number of loyalty points the user will be gaining through the booking they're making
+    
+    const numSingleRooms = parseInt(singleRooms.value) || 0;
+    const numDoubleRooms = parseInt(doubleRooms.value) || 0;
+    const numTripleRooms = parseInt(tripleRooms.value) || 0;
+    
+    const totalRooms = numSingleRooms + numDoubleRooms + numTripleRooms;
+    
+    let loyaltyPoints = 0;
+    
+    if (totalRooms > 3) {// If 4 or more rooms are booked, the user gains 20 loyalty points per room booked
+        loyaltyPoints = totalRooms * 20;
+        localStorage.setItem('numOfLoyaltyPoints', JSON.stringify(loyaltyPoints));// This adds the number of loyalty points gained to the local storage
+    }
+    loyaltyText.innerText = `${loyaltyPoints} loyalty points`;// This displays the number of loyalty points gained, in a text field
+}
+    
+let overallCost = 0;// This is the variable that contains the cost of all the hotel bookings made so far
 
 function bookStay() {
-    if (validateForm()) {
+    if (validateForm()) {// The booking can only be made if the form is validated
         const fullNameValue = fullName.value;
         const phoneNumberValue = phoneNumber.value;
         const checkInDateValue = checkIn.value;
@@ -157,52 +170,34 @@ function bookStay() {
         const totalRoomsBooked = numSingleRoomsValue + numDoubleRoomsValue + numTripleRoomsValue;
         const paymentMethod= document.querySelector('input[name="payment"]:checked').value;
     
-    // Calculate the cost of the stay
+        // Calculate the cost of the stay
         let cost = updateCost();
     
-        const details = `| Name: ${fullNameValue} | Contact No.:${phoneNumberValue} | Rooms Booked: ${totalRoomsBooked} | Check-in Date: ${checkInDateValue} | Days: ${numOfDaysValue} | Payment Method: ${paymentMethod} | Cost: LKR ${cost.toFixed(2)} |`;
+        const details = `| Name: ${fullNameValue} | Contact No.:${phoneNumberValue} | Rooms Booked: ${totalRoomsBooked} | Check-in Date: ${checkInDateValue} | Days: ${numOfDaysValue} | Payment Method: ${paymentMethod} | Cost: LKR ${cost.toFixed(2)} |`; // This displays the user's booking details in a paragraph at the bottom of the webpage
     
-        if (detailsParagraph.innerText.trim() === '') {
+        if (detailsParagraph.innerText.trim() === '') {// This is so that no space will be left above if there are no previous bookings were displayed
             detailsParagraph.innerText = details;
-        } else {
+        } else {// This is so that the next set of details are displayed before the previous ones, and dont overwrite them
             detailsParagraph.innerText += '\n\n' + details;
         }
     
-        overallCost += cost;
+        overallCost += cost;// This adds the cost of the booking just made to the existing overall cost
     
-        overallCostText.innerText = `LKR ${overallCost.toFixed(2)}`;
-        costText.innerText = `LKR 0.00`;
-        alert(`Thank you for booking your stay, ${fullNameValue}! The price of your booking is LKR ${cost.toFixed(2)}`);
-        hotelBooking.reset();
-        return cost;
+        overallCostText.innerText = `LKR ${overallCost.toFixed(2)}`;// Changes the displayed overall cost
+        costText.innerText = `LKR 0.00`;// Sets the current cost to 0
+        alert(`Thank you for booking your stay, ${fullNameValue}! The price of your booking is LKR ${cost.toFixed(2)}`);// Alert that thanks the user for the booking, and displays the name and cost
+        hotelBooking.reset();// resets the form, so a new booking can be made
+        return cost;// Returns the cost, so it can be added to the total overall cost
     }
 }
-    
-function checkLoyaltyPoints() {
-    
-    const numSingleRooms = parseInt(singleRooms.value) || 0;
-    const numDoubleRooms = parseInt(doubleRooms.value) || 0;
-    const numTripleRooms = parseInt(tripleRooms.value) || 0;
-    
-    const totalRooms = numSingleRooms + numDoubleRooms + numTripleRooms;
-    
-    let loyaltyPoints = 0;
-    
-    if (totalRooms > 3) {
-        loyaltyPoints = totalRooms * 20;
-        localStorage.setItem('numOfLoyaltyPoints', JSON.stringify(loyaltyPoints));
-    }
-    loyaltyText.innerText = `${loyaltyPoints} loyalty points`;
-}
-
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
 // For the Adventure Booking Form
 
-//Referring the DOM elements
-const adBooking = document.getElementById("adventureForm");
+//Referring the DOM elements of the adventure booking form
+const adBooking = document.getElementById("adventureForm");// Gives the adventure form an ID
 const fullName2 = document.getElementById("fullName2Input");
 const phoneNumber2 = document.getElementById("phoneNum2Input");
 const email2 = document.getElementById("email2Input");
@@ -227,22 +222,23 @@ const adventureDetailsParagraph = document.getElementById('adventureDetails');
 //Adding event listeners
 showAdventureButton.addEventListener('click', () => {
     if(validateAdventureForm()){
-        showAdventures();
+        showAdventures();//if the form is validated(if all necessary fields are filled in correctly), and the show adventure button is clicked, the details of the particular booking are displayed in a text area at the `
     }
 });
 bookAdventureButton.addEventListener('click', () => {
     if(validateAdventureForm()){
-        bookAdventure();
-        updateTotalCost();
+        bookAdventure();//Books the adventure upon validation
+        updateTotalCost();//Updates the cost of both hotel and adventure bookings
     }
 });
 
 addAdventureToFavButton.addEventListener('click', () => {
     if (validateAdventureForm()) {
-        addAdventureToFavourites();
+        addAdventureToFavourites();// Adds the details of the booking to local storage as a favourite, overwriting any existing favourites
     }
 });
 
+//The event listeners that update the current adventure cost 
 localAdults.addEventListener('input', updateAdventureCost);
 localKids.addEventListener('input', updateAdventureCost);
 foreignAdults.addEventListener('input', updateAdventureCost);
@@ -255,7 +251,9 @@ numOfHours.addEventListener('input', updateAdventureCost);
 
 let overallAdventureCost = 0;
 
-function updateAdventureCost() {
+function updateAdventureCost() {// Updates the current adventure cost when any changes are made to input fields
+
+    // Declaring the constants, that are the prices for each type of individual
     const localAdultsCost = 5000;
     const localKidsCost = 2000;
     const foreignAdultsCost = 10000;
@@ -268,13 +266,13 @@ function updateAdventureCost() {
     const numOfForeignAdults = parseInt(foreignAdults.value) || 0;
     const numOfForeignKids = parseInt(foreignKids.value) || 0;
 
-    let totalAdventureCost =
+    let totalAdventureCost = // This is the formula to find the cost of the booking
         (numOfLocalAdults * localAdultsCost +
         numOfLocalKids * localKidsCost +
         numOfForeignAdults * foreignAdultsCost +
         numOfForeignKids * foreignKidsCost) * hours;
 
-    if (hasGuide) {
+    if (hasGuide) {// increases prices if the include guide option is checked
         totalAdventureCost +=
             numOfLocalAdults * 1000 +
             numOfForeignAdults * 1000 +
@@ -283,15 +281,15 @@ function updateAdventureCost() {
     }
 
     if (isNaN(totalAdventureCost)) {
-        return 0; // Return 0 if the calculation results in NaN
+        return 0; // Returns 0 if the calculation results in NaN
     }
 
-    currentAdCost.innerText = `LKR ${totalAdventureCost.toFixed(2)}`;
-    return totalAdventureCost;
+    currentAdCost.innerText = `LKR ${totalAdventureCost.toFixed(2)}`;//Dynamically changes the cost of the booking, when changes are made to the input fields
+    return totalAdventureCost;// returns the value of the adventure cost, to be added to the total overall cost at the end
 }
 
 
-function validateAdventureForm(){
+function validateAdventureForm(){// This ensures that all the input fields are filled in correctly before favourites can be added or booked
     const fullName2Value = fullName2.value;
     const phoneNumber2Value = phoneNumber2.value;
     const email2Value = email2.value;
@@ -321,7 +319,7 @@ function validateAdventureForm(){
     return true;
 }
 
-function addAdventureToFavourites() {
+function addAdventureToFavourites() {//Adds the adventure details currently filled to local storage, overwriting any existing favourite
         const adBookingDetails = {
             adDate: dayInput.value,
             locAdults: localAdults.value || 0,
@@ -388,7 +386,7 @@ function showAdventures(){
     }
 }
 
-function updateTotalCost() {
+function updateTotalCost() {// This function is to show the addition of the overall hotel costs and the overall adventure cost
     const hotelCost = overallCost || 0; // If overallCost is undefined, set it to 0
     const adventureCost = overallAdventureCost || 0; // If overallAdventureCost is undefined, set it to 0
     const totalCost = hotelCost + adventureCost;
