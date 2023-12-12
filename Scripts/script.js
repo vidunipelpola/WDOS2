@@ -35,11 +35,10 @@ bookButton.addEventListener('click', () =>{
 });
 addToFavButton.addEventListener('click', () =>{
     if(validateForm()){ // This is so that the booking is made only if the form has all the necessary input
-       addToFavourites();// Triggers the book function, once all the necessary fields are filled out
+       addToFavourites();// Triggers a function that uses local storage to add a particular booking to favourites
         
     }
 });
-addToFavButton.addEventListener('click', addToFavourites); // Triggers a function that uses local storage to add a particular booking to favourites
 checkLoyalty.addEventListener('click', checkLoyaltyPoints); // Triggers a function that allows the user to check how many loyalty points they hae
 
 // The input fields that are going to trigger a function that changes the cost displayed in the form
@@ -56,7 +55,6 @@ let totalRoomsBooked = 0;
 
 
 function updateCost() {// This function updates the amount the current booking in progress will cost, according to the changes made in the input fields
-    console.log("Cost Updated");
 
     //Declaring the values of each room unit
     const singleRoomCost = 25000;
@@ -143,8 +141,6 @@ function addToFavourites() {
 
     alert(`Items saved to favourites`);
     localStorage.setItem('favouriteHotelBooking', JSON.stringify(bookingDetails));
-
-    console.log("added to favourites");
 }
 
 
@@ -183,7 +179,6 @@ function bookStay() {
 }
     
 function checkLoyaltyPoints() {
-    console.log("loyaltycheck");
     
     const numSingleRooms = parseInt(singleRooms.value) || 0;
     const numDoubleRooms = parseInt(doubleRooms.value) || 0;
@@ -195,11 +190,9 @@ function checkLoyaltyPoints() {
     
     if (totalRooms > 3) {
         loyaltyPoints = totalRooms * 20;
-        console.log(`Awarded ${loyaltyPoints} loyalty points`);
+        localStorage.setItem('numOfLoyaltyPoints', JSON.stringify(loyaltyPoints));
     }
-    
     loyaltyText.innerText = `${loyaltyPoints} loyalty points`;
-    localStorage.setItem('loyaltyPointsGained', JSON.stringify(loyaltyPointsAccumulated));
 }
 
 
@@ -243,7 +236,13 @@ bookAdventureButton.addEventListener('click', () => {
         updateTotalCost();
     }
 });
-addAdventureToFavButton.addEventListener('click', addAdventureToFavourites);
+
+addAdventureToFavButton.addEventListener('click', () => {
+    if (validateAdventureForm()) {
+        addAdventureToFavourites();
+    }
+});
+
 localAdults.addEventListener('input', updateAdventureCost);
 localKids.addEventListener('input', updateAdventureCost);
 foreignAdults.addEventListener('input', updateAdventureCost);
@@ -305,7 +304,7 @@ function validateAdventureForm(){
     const adDiving = document.getElementById('diving');
 
     if (fullName2Value === "" || phoneNumber2Value === "" || email2Value === "" || dateValue === "" || numOfHoursValue <= 0) {
-        alert("Please fill in all  fields");
+        alert("Please fill in all fields");
         return false;
     }
 
@@ -323,7 +322,6 @@ function validateAdventureForm(){
 }
 
 function addAdventureToFavourites() {
-    console.log("Added adventure to favourites");
         const adBookingDetails = {
             adDate: dayInput.value,
             locAdults: localAdults.value || 0,
@@ -337,8 +335,6 @@ function addAdventureToFavourites() {
     
         alert(`Items saved to favourites`);
         localStorage.setItem('favouriteHotelBooking', JSON.stringify(adBookingDetails));
-    
-        console.log("Items added to favourites");
 }
 
 function bookAdventure() {
