@@ -169,7 +169,7 @@ function bookStay() {
         if (detailsParagraph.innerText.trim() === '') {
             detailsParagraph.innerText = details;
         } else {
-            detailsParagraph.innerText += '/n/n' + details;
+            detailsParagraph.innerText += '\n\n' + details;
         }
     
         overallCost += cost;
@@ -387,7 +387,7 @@ function showAdventures(){
         if (adventureDetailsParagraph.innerText.trim() === '') {
             adventureDetailsParagraph.innerText = adventureDetails;
         } else {
-            adventureDetailsParagraph.innerText += '/n/n' + adventureDetails;
+            adventureDetailsParagraph.innerText += '\n\n' + adventureDetails;
         }
     }
 }
